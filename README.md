@@ -40,3 +40,16 @@ apt install snapd && service snapd start \
   && snap install postman \
   && snap install another-redis-desktop-manager
 ```
+
+```
+# https://docs.docker.com/engine/install/debian/
+# 安装docker
+apt install -y ca-certificates curl gnupg lsb-release \
+  && curl -fsSL \
+  https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg \
+  && echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
+  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null \
+  && apt update && apt install -y docker-ce \
+  && service start docker && docker version
+```
