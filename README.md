@@ -10,6 +10,7 @@ echo 'deb https://mirrors.tencent.com/debian/ bullseye-updates main' \
   >> /etc/apt/sources.list &&\
 apt update && apt install -y vim ifstat openssh-server
 ```
+
 ```
 # 安装sublime-text
 curl -O \
@@ -31,4 +32,11 @@ E1D0AE85 A0BBD039 0E9C8D55 E1B89D5D
 5CDB7036 E56DE1C0 EFCC0840 650CD3A6
 B98FC99C 8FAC73EE D2B95564 DF450523
 ------ END LICENSE ------
+```
+
+```
+# 安装postman 安装redis-cli
+apt install snapd && service snapd start \
+  && snap install postman \
+  && snap install another-redis-desktop-manager
 ```
